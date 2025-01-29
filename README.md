@@ -1,10 +1,8 @@
-RESTAURANTE MAKIS - CARRITO DE COMPRAS - PEDIDOS AL WHATSAPP
+RESTAURANTE MAKIS - CARRITO DE COMPRAS - PEDIDOS AL WHATSAPP - RESPONSIVE 
 
 DIRECCION GOOGLE MAPS - DELIVERY
 
 ![Image](https://github.com/user-attachments/assets/6145c107-0276-4001-b78d-6afe067cc929)
-
-![Image](https://github.com/user-attachments/assets/8d313331-ad42-4452-8142-d512075e17d3)
 
 ![Image](https://github.com/user-attachments/assets/71591a41-c0a9-4ea9-abde-5e4473216034)
 
