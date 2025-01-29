@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Menú Digital - Restaurante</title>
+    <style>
+        @import url(https://db.onlinewebfonts.com/c/488143345f7740e1f67f6446149b0bf9?family=Muralista+W01+Regular);
+
+
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6, #ffffff);
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            padding: 30px;
+            background: linear-gradient(to bottom, #000000 70%, #d80825 30%);
+        }
+
+        .logo {
+            margin: auto;
+            margin: 40px auto 20px auto;
+            background-color: #0073e6;
+            width: 160px;
+            /* Ancho del contenedor */
+            height: 160px;
+            /* Alto del contenedor */
+            overflow: hidden;
+            /* Esconde partes sobrantes de la imagen */
+        }
+
+        .logo img {
+            width: 100%;
+            /* La imagen ocupa todo el ancho del contenedor */
+            height: 100%;
+            /* La imagen ocupa todo el alto del contenedor */
+            object-fit: cover;
+            /* Ajusta la imagen al contenedor sin deformarse */
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .buttons {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 1rem;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+            /* Limitar el tamaño máximo de los botones */
+            background-color: #000;
+            color: #fff;
+        }
+
+        .buttons a:hover {
+            background-color: #d80825;
+        }
+
+        .survey-section {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .survey-section button {
+            background-color: #d80825;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+
+
+
+        .survey-section button:hover {
+            background-color: #000;
+        }
+
+        .share-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            /* Activa Flexbox */
+            align-items: center;
+            /* Alinea verticalmente ícono y texto */
+            gap: 10px;
+            /* Espacio entre el ícono y el texto */
+            padding: 12px 30px;
+            /* Espaciado interno */
+            border: none;
+            /* Sin borde */
+            border-radius: 1rem;
+            /* Bordes redondeados */
+            background-color: #000;
+            /* Color del botón */
+            color: #fff;
+            /* Color del texto */
+            font-size: 16px;
+            /* Tamaño del texto */
+            cursor: pointer;
+            /* Muestra el puntero de mano al pasar */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .share-btn:hover {
+            background-color: #d80825;
+            /* Cambia el color al pasar el cursor */
+            transform: scale(1.05);
+            /* Agranda ligeramente el botón */
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px;
+            }
+
+            .buttons a {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+
+            .survey-section button {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <div class="logo">
+        <img src="img/img1.jpg" alt="Logo del Restaurante">
+    </div>
+    <div class="subtitle">Comida China - Sushi - Delivery</div>
+    <div class="buttons">
+        <a href="Header_Menu.html">
+            <i class="fa-solid fa-utensils" style="font-size: 30px; color: white;"></i>
+            Ver Menú Digital
+            <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i>
+        </a>
+        <a href="https://wa.me/123456789" target="_blank">
+            <i class="fa-solid fa-phone" style="font-size: 30px; color: white;"></i>
+            Llamar por Teléfono
+            <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i>
+        </a>
+        <a href="https://wa.me/123456789" target="_blank">
+            <i class="fab fa-whatsapp" style="font-size: 30px; color: white;"></i>
+            Escríbenos por WhatsApp
+            <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i>
+        </a>
+        <a href="https://wa.me/123456789" target="_blank">
+            <i class="fa-brands fa-instagram" style="font-size: 30px; color: white;"></i>
+            Síguenos en Instagram
+            <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i>
+        </a>
+        <a href="https://wa.me/123456789" target="_blank">
+            <i class="fa-brands fa-facebook" style="font-size: 30px; color: white;"></i>
+            Síguenos en Facebook
+            <i class="fa-solid fa-angle-right" style="margin-left: 10px;"></i>
+        </a>
+    </div>
+
+    <div class="survey-section">
+        <h3>Ayúdanos a mejorar</h3>
+        <button onclick="window.location.href='encuesta.html'">
+            <i class="fa-solid fa-square-poll-vertical" style="font-size: 30px; color: white;"></i>
+            Encuesta de Servicios</button>
+    </div>
+
+    <button class="share-btn"
+        onclick="navigator.share({url: window.location.href, title: 'Visita nuestro Menú Digital', text: 'Echa un vistazo a nuestro menú digital de comida deliciosa!'})">
+        <i class="fa-solid fa-share-nodes" style="font-size: 25px; color:white;"></i>
+        Compartir
+    </button>
+
+    <script>
+        // Verificar si la API de compartir está disponible
+        if (!navigator.share) {
+            document.querySelector('.share-btn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

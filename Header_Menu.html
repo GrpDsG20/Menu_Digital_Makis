@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="Menu.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial;
+      
+    }
+
+    /* Estilo para las pestañas */
+    .tab {
+      box-sizing: border-box;
+      position: fixed; /* También fija las pestañas debajo del header */
+      top: 180px; /* Ajusta la posición de las pestañas debajo del encabezado */
+      left: 0;
+      right: 0; /* Esto asegura que ocupe toda la anchura del contenedor */
+      width: 90%;
+      margin-left: auto; /* Centrado automático */
+  margin-right: auto; /* Centrado automático */
+      background-color: red;
+      text-align: center;
+      z-index: 10; /* Mantiene el z-index por debajo del encabezado */
+      display: block;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 50px;
+      transition: 0.3s;
+      font-size: 17px;
+      background-color: #F2F2F2;
+    }
+
+    /* Efecto al pasar el mouse (hover) */
+    .tab button:hover {
+      background-color: #ddd;
+      /* Cambia el fondo cuando pasas el mouse */
+    }
+
+    /* Mantener el color de fondo de la pestaña activa */
+    .tab button.active {
+      background-color: #ccc;
+      /* Cambia el color de fondo cuando está activa */
+    }
+
+    /* Estilo para el contenido de las pestañas */
+    .tabcontent {
+      display: none;
+      padding: 6px 0;
+      border-top: none;
+      width: 90%;
+      margin: 0 auto;
+      /* Centrado */
+    }
+
+  /* Contenedor principal para mantener la estructura */
+.sticky-container {
+  width: 100%;
+  position: relative; /* Se mantiene en el flujo normal del documento */
+  z-index: 999; /* Asegura que los elementos dentro queden encima */
+  background-color: rebeccapurple;
+}
+  </style>
+</head>
+
+<body>
+  <div class="sticky-container">
+    <div class="shop__header">
+      <p class="shop__text">
+        <a class="button js-toggle-cart" href="#" title="View cart">
+          View cart <span class="js-cart-counter">0</span>
+        </a>
+      </p>
+    </div>
+  
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+  </div>
+
+  <div id="London" class="tabcontent">
+    <div class="shop__products">
+      <div class="products">
+        <div class="products__item">
+          <article class="product js-add-to-cart">
+            <div class="product__image-container">
+              <img src="img/img1.jpg" alt="Imagen del Producto" class="product__image">
+            </div>
+            <div class="product__info">
+              <h1 class="product__title">Product title 1</h1>
+              <p class="product__description">This is a brief description of the product. It highlights key features and
+                details.
+                This is a brief description of the product. It highlights key features and details.
+              </p>
+            </div>
+            <div class="product__price-container">
+              <p class="product__price">$<span class="js-product-price">30.00</span></p>
+            </div>
+          </article>
+        </div>
+  
+  
+        <div class="products__item">
+          <article class="product js-add-to-cart">
+            <div class="product__image-container">
+              <img src="img/img2.jpg" alt="Imagen del Producto" class="product__image">
+            </div>
+            <div class="product__info">
+              <h1 class="product__title">Productó title 22</h1>
+              <p class="product__description">This is a brief description of the product. It highlights key features and
+                details.
+                This is a brief description of the product. It highlights key features and details.
+              </p>
+            </div>
+            <div class="product__price-container">
+              <p class="product__price">$<span class="js-product-price">50.00</span></p>
+            </div>
+          </article>
+        </div>
+  
+        <div class="products__item">
+          <article class="product js-add-to-cart">
+            <div class="product__image-container">
+              <img src="img/img2.jpg" alt="Imagen del Producto" class="product__image">
+            </div>
+            <div class="product__info">
+              <h1 class="product__title">Productó title 22</h1>
+              <p class="product__description">This is a brief description of the product. It highlights key features and
+                details.
+                This is a brief description of the product. It highlights key features and details.
+              </p>
+            </div>
+            <div class="product__price-container">
+              <p class="product__price">$<span class="js-product-price">30.00</span></p>
+            </div>
+          </article>
+        </div>
+  
+  
+        <div class="products__item">
+          <article class="product js-add-to-cart">
+            <div class="product__image-container">
+              <img src="img/img2.jpg" alt="Imagen del Producto" class="product__image">
+            </div>
+            <div class="product__info">
+              <h1 class="product__title">Productó title 22</h1>
+              <p class="product__description">This is a brief description of the product. It highlights key features and
+                details.
+                This is a brief description of the product. It highlights key features and details.
+              </p>
+            </div>
+            <div class="product__price-container">
+              <p class="product__price">$<span class="js-product-price">40.00</span></p>
+            </div>
+          </article>
+        </div>
+  
+  
+        <div class="products__item">
+          <article class="product js-add-to-cart">
+            <div class="product__image-container">
+              <img src="img/img2.jpg" alt="Imagen del Producto" class="product__image">
+            </div>
+            <div class="product__info">
+              <h1 class="product__title">Productó title 22</h1>
+              <p class="product__description">This is a brief description of the product. It highlights key features and
+                details.
+                This is a brief description of the product. It highlights key features and details.
+              </p>
+            </div>
+            <div class="product__price-container">
+              <p class="product__price">$<span class="js-product-price">80.00</span></p>
+            </div>
+          </article>
+        </div>
+  
+        <!-- Agrega más productos según sea necesario -->
+      </div>
+    </div>
+  <div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="Tokyo" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  <aside class="cart js-cart">
+    <div class="cart__header">
+      <label for="address" class="cart__address-label"></label>
+      <input type="text" id="address" class="cart__address-input" placeholder="Direccion">
+      <p class="cart__text">
+        <a class="button button--light js-toggle-cart" href="#" title="Close cart">
+          <i class="fa-solid fa-xmark" style="font-size: 30px;"></i> <!-- Icono de cerrar -->
+        </a>
+      </p>
+    </div>
+    <div class="cart__products js-cart-products">
+      <p class="cart__empty js-cart-empty">
+      <br>
+        ¡Agrega tu sabor favorito!
+      </p>
+      <div class="cart__product js-cart-product-template" style="display:none;">
+        <article class="js-cart-product">
+          <div class="cart-product">
+            <h1 class="cart-product__title"></h1> <!-- Este título se actualizará dinámicamente -->
+            <p class="cart-product__price">$<span class="js-cart-product-price">0.00</span></p>
+            <!-- Este precio se actualizará dinámicamente -->
+            <div class="cart-product__controls">
+              <input type="number" class="cart-product__quantity" value="1" min="1" />
+              <a class="cart-product__remove js-remove-product" href="#" title="Delete product">
+                <i class="fa-solid fa-trash" style="font-size: 20px; margin-left: 30px; color: white;"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+  
+    </div>
+    <div class="cart__footer">
+      <div class="cart__footer-content">
+        <p class="cart__total">
+          <strong>Total:</strong> $<span class="js-cart-total">0.00</span>
+        </p>
+        <a class="button js-buy-products" href="#" title="Buy products">
+          Buy products
+        </a>
+      </div>
+    </div>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Abre la primera pestaña por defecto cuando se carga la página
+    document.addEventListener("DOMContentLoaded", function () {
+      // Abre la primera pestaña automáticamente
+      document.querySelector(".tab button").click();
+    });
+  </script>
+  <div class="lightbox js-lightbox js-toggle-cart"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script src="Menu.js"></script>
+</body>
+
+</html>

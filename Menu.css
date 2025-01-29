@@ -1,0 +1,693 @@
+@import url(https://db.onlinewebfonts.com/c/488143345f7740e1f67f6446149b0bf9?family=Muralista+W01+Regular);
+
+@font-face {
+  font-family: "AristotelicaIcons-DemiBold";
+  /* Nombre que vas a usar en tu CSS */
+  src: url("Font-size/Poppins/Poppins-ExtraBold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F3F3F3;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body.open {
+  overflow-y: hidden;
+}
+
+.shop {
+  position: relative;
+  z-index: 5;
+}
+
+.shop__header {
+  box-sizing: border-box;
+  position: fixed;
+  background: linear-gradient(to bottom, #000000 80%, #d80825 30%);
+  width: 100%;
+  padding: 10px 50px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+  /* Sombra más suave */
+  display: flex;
+  /* Activar flexbox */
+  justify-content: space-between;
+  /* Centrar contenido horizontalmente */
+  align-items: center;
+  /* Centrar contenido verticalmente */
+  z-index: 9999;
+}
+
+.shop__products {
+  padding-top: 120px;
+}
+
+.Container_Subtitle {
+  margin: auto;
+  padding: 10px 0;
+  /* Asegura que el bloque esté centrado */
+  width: 100%;
+  text-align: center;
+  /* Centra el texto horizontalmente */
+}
+
+.Subtitle {
+  font-size: 2rem;
+  /* Tamaño de la fuente */
+  color: #000;
+  /* Color del texto */
+  font-family: "Muralista W01 Regular";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* Espaciado entre letras */
+
+}
+
+.shop__title {
+  float: left;
+  margin: 0;
+  height: 120px;
+  /* Corrige '200x' a '200px' */
+  width: 120px;
+  display: flex;
+  /* Asegura que el contenido (imagen) se ajuste correctamente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  overflow: hidden;
+  /* Asegura que la imagen no salga del contenedor */
+}
+
+.shop__logo {
+  width: auto;
+  /* La imagen ocupará todo el ancho del contenedor */
+  height: 100%;
+  /* La imagen ocupará toda la altura del contenedor */
+}
+
+.w3-top {
+  flex-grow: 1;
+  /* Permite que el menú crezca para ocupar el espacio central */
+  display: flex;
+  justify-content: center;
+  /* Centrar horizontalmente el menú */
+  overflow-x: auto;
+  /* Permite el desplazamiento horizontal */
+  -webkit-overflow-scrolling: touch;
+  /* Mejora la suavidad del desplazamiento en dispositivos móviles */
+  white-space: nowrap;
+}
+
+.w3-bar-item {
+  color: #fff !important;
+  font-family: "Muralista W01 Regular";
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+  position: relative;
+  /* Necesario para posicionar el subrayado */
+  padding: 13px;
+}
+
+.w3-bar-item::after {
+  content: '';
+  /* Creamos un elemento pseudo */
+  position: absolute;
+  bottom: 0;
+  /* Ubicamos el subrayado en la parte inferior */
+  left: 0;
+  width: 0;
+  /* Inicia con un ancho de 0 */
+  height: 2px;
+  /* Grosor del subrayado */
+  background-color: #d80825;
+  /* Color del subrayado */
+  transition: width 0.3s ease;
+  /* Animación suave al aumentar el ancho */
+}
+
+.w3-bar-item:hover::after {
+  width: 100%;
+  /* Cuando se hace hover, el subrayado se expande a todo el ancho */
+  transition: width 0.3s ease;
+}
+
+/* Cuando el enlace tiene la clase "active", el subrayado se mantiene */
+.w3-bar-item.active::after {
+  width: 100%;
+  /* El subrayado se queda con todo el ancho */
+}
+
+.shop__text {
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: right;
+
+  .button {
+    padding: 15px 15px;
+  }
+}
+
+.shop__text a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.w3-bar-item {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.products {
+  display: flex;
+  /* Flexbox para manejar el diseño */
+  flex-wrap: wrap;
+  /* Permite que los elementos bajen a la siguiente fila si no hay espacio */
+  gap: 10px;
+  /* Espaciado entre los productos */
+  justify-content: space-between;
+  /* Espaciado uniforme entre los elementos */
+  margin: 0 auto;
+  /* Centra el contenedor */
+  max-width: 100%;
+  width: 90%;
+  padding: 20px;
+  /* Espaciado interno */
+  box-sizing: border-box;
+  /* Incluye el padding en el ancho total */
+  overflow: hidden;
+  /* Evita que elementos desborden el contenedor */
+}
+
+
+/* El producto como un botón clickeable */
+.product {
+  display: grid;
+  /* Usamos Grid Layout */
+  grid-template-columns: repeat(2, 1fr);
+  /* Dos columnas de igual tamaño */
+  align-items: center;
+  /* Alinea los elementos verticalmente */
+  /* Fondo blanco */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra para el contenedor */
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Efecto visual al interactuar */
+  border-radius: 1.2rem;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  /* Sombra más grande al hacer hover */
+}
+
+/* Imagen del producto */
+.product__image {
+  width: 100%;
+  /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 100%;
+  /* La imagen ocupa el 100% de la altura del contenedor */
+  object-fit: cover;
+  /* Mantiene las proporciones y recorta la imagen si es necesario */
+  border-radius: 1.2rem 0 0 1.2rem;
+  transition: transform 0.3s ease;
+  /* Transición suave cuando se interactúa con la imagen */
+
+}
+
+.product__image-container {
+  height: 100%;
+  /* Fondo azul */
+  display: flex;
+  /* Usamos flexbox para centrar la imagen */
+  justify-content: center;
+  /* Centra la imagen horizontalmente */
+  align-items: center;
+  /* Centra la imagen verticalmente */
+  overflow: hidden;
+  /* Asegura que la imagen no sobresalga */
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 0px 20px;
+  margin: auto;
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+.product__description {
+  font-size: 14px;
+  /* Tamaño de la descripción */
+  color: #666;
+  /* Color gris para el texto */
+  /* Espacio entre el título y la descripción */
+
+}
+
+.product__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+}
+
+.product__price-container {
+  padding: 0 20px;
+}
+
+.product__price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  text-align: right;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+}
+
+
+.products__item {
+  width: calc(40%);
+  /* Cada producto ocupa el 48% del contenedor */
+  flex-grow: 1;
+  border-radius: 5px;
+  text-align: center;
+  /* Centrar el contenido del producto */
+  cursor: pointer;
+  /* Cambiar el cursor a mano para indicar que es clickeable */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 1.2rem;
+}
+
+
+.button--light {
+  color: #000;
+  background-color: #666;
+}
+
+.js-toggle-cart {
+  background-color: #d80825;
+}
+
+.cart {
+  position: fixed;
+  background: rgb(255, 255, 255);
+  /* Fondo completamente blanco */
+  width: 400px;
+  max-width: 90%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: translate(500px, 0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 20;
+}
+
+body.open .cart {
+  transform: translate(0, 0);
+}
+
+.cart__header {
+  box-sizing: border-box;
+  position: relative;
+  background: #F3F3F3;
+  width: 100%;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  align-items: center; /* Centrar verticalmente */
+  display: flex;
+  justify-content: space-between;
+
+}
+.cart__text {
+background-color: transparent;
+width: 10%;
+text-align: right;
+padding: 0 20px 0 0;
+
+}
+.cart__input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 75%; /* Ancho del input */
+}
+
+.cart__icon {
+  position: absolute;
+  left: 10px; /* Espaciado del ícono dentro del contenedor */
+  font-size: 18px;
+  color: #000;
+}
+
+
+.cart__title {
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0;
+  float: left;
+}
+
+.cart__products {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+
+  article {
+    padding: 30px 10px 30px 10px;
+    height: 0;
+
+    h1 {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}
+
+.cart-product__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-product__quantity {
+  width: 50px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  
+}
+.cart-product__remove {
+  width: auto;
+  text-decoration: none;
+
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.cart__footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  /* Ajusta el espacio superior/inferior si es necesario */
+}
+
+.cart__total {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+  /* Ajusta el tamaño si lo necesitas */
+}
+
+.cart__footer-content .button {
+  font-size: 1rem;
+  /* Mantén un buen tamaño para el botón */
+}
+
+.cart-product {
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  /* Cuatro columnas: Título, Cantidad, Precio, Eliminar */
+  align-items: center;
+  /* Espacio entre las columnas */
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  background-color:#000;
+}
+
+.cart-product__title {
+  color: #FFF;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+}
+
+.cart-product__price {
+  color: #FFF;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+}
+
+
+.js-cart-product-price {
+  color: #FFF;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+}
+
+.cart__empty {
+  padding: 30px 15px;
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.cart__footer {
+  box-sizing: border-box;
+  position: absolute;
+  background: #F3F3F3;
+  width: 100%;
+  padding: 15px 30px;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+
+
+.js-buy-products {
+  background-color: #d80825;
+  color: #fff;
+  font-family: "AristotelicaIcons-DemiBold", sans-serif;
+  padding: 15px 50px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.fa-xmark{
+  background-color: #F3F3F3;
+}
+.lightbox {
+  position: fixed;
+  background: #000;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, width 0ms ease-in-out 0.3s;
+}
+
+body.open .lightbox {
+  width: 100%;
+  opacity: 0;
+
+}
+
+.js-cart-counter {
+  display: inline-block;
+  /* Color del fondo del contador */
+  color: #fff !important;
+  font-family: 'Poppins', sans-serif;
+  /* Color del texto */
+  border-radius: 50%;
+  /* Forma circular */
+  padding: 5px 12px;
+  /* Espaciado interno */
+  font-size: 14px;
+  /* Tamaño del texto */
+  margin-left: 5px;
+  text-align: center;
+  /* Espaciado entre el texto del botón y el contador */
+}
+
+.product-quantity {
+  width: 40px;
+  /* Reduce el ancho */
+  font-size: 14px;
+  /* Hace el texto más pequeño */
+  padding: 5px;
+  /* Reduce el padding (espaciado interno) */
+  text-align: center;
+  /* Centra el número dentro del campo */
+}
+
+
+.cart__address-input {
+  padding: 10px 10px 10px 35px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa alrededor del contorno */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width:1250px) {
+  .products {
+    padding: 20px 0;
+  }
+
+}
+
+@media (max-width:900px) {
+  .products {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .shop__title {
+    height: 80px;
+    width: 0;
+  }
+
+  .w3-bar-item {
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+  .shop__products {
+    padding-top: 80px;
+  }
+  .product__info {
+    line-height: 1.2;
+  }
+
+}
+
+@media (max-width:750px) {
+  .products {
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .products__item {
+    width: 100%;
+  }
+
+  .shop__header {
+    padding: 10px 15px 10px 20px;
+
+  }
+
+  .js-cart-counter {
+    display: none;
+  }
+
+  .w3-bar-item {
+    margin: 0 10px;
+    font-size: 18px;
+    padding: 13px;
+  }
+
+  .Subtitle {
+    font-size: 1.5rem;
+
+  }
+
+  .w3-top {
+    justify-content: flex-start;
+  }
+
+  .js-toggle-cart {
+    background-color: transparent;
+  }
+
+  .shop__text {
+    .button {
+      padding: 15px 10px 15px 20px;
+    }
+  }
+}
+
+@media (max-width:480px) {
+
+  .product__info {
+    height: 130px;
+    padding: 20px 10px 0px 10px;
+  }
+
+  .product__description {
+    font-size: 11px;
+  }
+
+  .product {
+    grid-template-columns: 40% 60%;
+  }
+
+  .product__title {
+    font-size: 13px;
+  }
+
+  .product__price {
+    font-size: 12px;
+  }
+
+  .product__price-container {
+    padding: 0 10px;
+  }
+
+  .Container_Subtitle {
+
+    padding: 10px 0;
+
+  }
+  .cart {
+    max-width: 100%;
+  }
+  .cart__footer {
+
+    padding: 15px 20px;
+
+  }
+}
